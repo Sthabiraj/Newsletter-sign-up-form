@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  height: 100%;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+.container .image {
+  background: url(./assets/images/illustration-sign-up-mobile.svg);
+  border-radius: 0 0 15px 15px;
+  width: 100%;
+  height: 230px;
+}
+.container section {
+  padding: 30px 20px;
+}
+.container section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+  margin-bottom: 1.3rem;
+}
+.container section .list-items {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 0.7rem;
+}
+.container section p {
+  margin-bottom: 1.3rem;
+}
+.container .same {
+  color: var(--charcoal-grey);
+  line-height: 1.3;
+  font-weight: 400;
+}
+.container section form {
+  display: flex;
+  flex-direction: column;
+}
+.container section form label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--dark-slate-grey);
+  margin-bottom: 0.5rem;
+}
+.container form .box {
+  padding: 1.1rem 1.2rem;
+  border-radius: 8px;
+}
+.container form .input-box {
+  border: 1px solid var(--grey);
+  margin-bottom: 1.2rem;
+}
+.container form .subscribe {
+  border: none;
+  background-color: var(--dark-slate-grey);
+  color: white;
+  font-weight: 700;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 8px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 375px) {
+}
