@@ -24,7 +24,7 @@
         <div class="image"></div>
       </figure>
       <section>
-        <h1>Stay updated!</h1>
+        <h1 class="title">Stay updated!</h1>
         <p class="same">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
@@ -53,7 +53,10 @@
           </div>
         </div>
         <form>
-          <label for="email">Email address</label>
+          <div class="label">
+            <label for="email">Email address</label>
+            <label for="error" id="message">Valid email required</label>
+          </div>
           <input
             type="email"
             id="email"
@@ -61,20 +64,30 @@
             required
             class="box input-box"
           />
-          <button class="box subscribe">Subscribe to monthly newsletter</button>
+          <button class="box subscribe" onclick="checkEmail()">
+            Subscribe to monthly newsletter
+          </button>
         </form>
       </section>
     </main>
-    <!-- Sign-up form start -->
-
-    <!-- Sign-up form end -->
 
     <!-- Success message start -->
-
-    <!-- Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
-
+    <div class="success-message">
+      <section class="top">
+        <figure class="icon">
+          <img src="./assets/images/icon-success.svg" alt="sucess icon" />
+        </figure>
+        <h1 class="title">Thanks for subscribing!</h1>
+        <p class="same">
+          A confirmation email has been sent to
+          <strong>ash@loremcompany.com</strong>. Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+      </section>
+      <section class="bottom">
+        <button class="subscribe box">Dismiss message</button>
+      </section>
+    </div>
     <!-- Success message end -->
 
     <div class="attribution">
