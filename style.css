@@ -22,10 +22,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--dark-slate-grey);
+  overflow-x: hidden;
+}
+.overflow {
+  overflow: hidden;
 }
 .container {
   height: 100%;
+  width: 100%;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
@@ -120,11 +124,11 @@ body {
   display: flex;
   justify-content: center;
   position: absolute;
-  background-color: var(--dark-slate-grey);
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 .success-message-container {
   padding: 20px;
@@ -132,7 +136,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  max-width: 400px;
+  width: 100%;
   background-color: var(--white);
 }
 .top {
@@ -158,9 +162,10 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   body {
     gap: 20px;
+    background-color: var(--dark-slate-grey);
   }
   .container {
     flex-direction: row-reverse;
@@ -190,6 +195,9 @@ body {
   }
   .success-message {
     align-items: center;
+  }
+  .success-message.active {
+    background-color: var(--dark-slate-grey);
   }
   .success-message-container {
     height: fit-content;

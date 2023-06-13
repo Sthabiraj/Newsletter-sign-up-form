@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let email = document.getElementById("email");
   let message = document.getElementById("message");
   let success = document.getElementById("success");
-
+  let body = document.getElementById("overflow");
   function checkEmail(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isValidEmail) {
       success.classList.add("active");
       email.value = "";
+      body.classList.add("overflow");
+      email.classList.remove("error");
+      message.classList.remove("error");
     } else {
       email.classList.add("error");
       message.classList.add("error");
@@ -23,5 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let close = document.querySelector(".close");
   close.addEventListener("click", function () {
     success.classList.remove("active");
+    body.classList.remove("overflow");
   });
 });
