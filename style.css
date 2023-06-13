@@ -101,6 +101,9 @@ body {
   border: 1px solid var(--grey);
   margin-bottom: 1.2rem;
 }
+.input-box:focus {
+  outline: 2px solid var(--grey);
+}
 .input-box.error {
   outline: 1px solid var(--primary);
   color: var(--primary);
@@ -113,8 +116,7 @@ body {
   font-weight: 700;
   cursor: pointer;
 }
-.subscribe:hover,
-.subscribe:focus {
+.subscribe:hover {
   background-image: linear-gradient(to right, #d0476f 0%, #ff6257 50%);
 }
 .success-message {
