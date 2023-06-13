@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--dark-slate-grey);
 }
 .container {
   height: 100%;
@@ -116,17 +117,23 @@ body {
   display: none;
 }
 .success-message.active {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--dark-slate-grey);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+.success-message-container {
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
-  background-color: var(--white);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   height: 100%;
-  width: 100%;
+  max-width: 400px;
+  background-color: var(--white);
 }
 .top {
   padding-top: 100px;
@@ -145,13 +152,14 @@ body {
   text-align: center;
   padding: 8px;
   z-index: -1;
+  background-color: var(--white);
+  width: 482px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 @media screen and (min-width: 1024px) {
   body {
-    background-color: var(--dark-slate-grey);
     gap: 20px;
   }
   .container {
@@ -173,12 +181,28 @@ body {
     border-radius: 15px;
     background: url(./assets/images/illustration-sign-up-desktop.svg);
   }
-  .container .title {
+  .title {
     font-size: 3.5rem;
   }
   .attribution {
     color: var(--white);
+    background-color: transparent;
   }
-  .success-message.active {
+  .success-message {
+    align-items: center;
+  }
+  .success-message-container {
+    height: fit-content;
+    gap: 1.8rem;
+    border-radius: 30px;
+    padding: 50px;
+    scale: 0.85;
+    max-width: 480px;
+  }
+  .success-message-container .top {
+    padding: 0;
+  }
+  .success-message-container .bottom {
+    margin: 0;
   }
 }

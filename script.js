@@ -1,18 +1,27 @@
-function validateEmail(email) {
-  // Regular expression pattern for email validation
-  var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return pattern.test(email);
-}
-
-function checkEmail() {
+document.addEventListener("DOMContentLoaded", function () {
   let email = document.getElementById("email");
   let message = document.getElementById("message");
-  let success = document.getElementsByClassName("success-message")[0];
-  if (validateEmail(email.value)) {
-    console.log("Valid email");
-  } else {
-    console.log("Invalid email");
-    email.classList.toggle("error");
-    message.classList.toggle("error");
+  let success = document.getElementById("success");
+
+  function checkEmail(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var isValidEmail = pattern.test(email.value);
+    if (isValidEmail) {
+      success.classList.add("active");
+      email.value = "";
+    } else {
+      email.classList.add("error");
+      message.classList.add("error");
+    }
   }
-}
+
+  let button = document.querySelector(".check");
+  button.addEventListener("click", checkEmail);
+
+  let close = document.querySelector(".close");
+  close.addEventListener("click", function () {
+    success.classList.remove("active");
+  });
+});
